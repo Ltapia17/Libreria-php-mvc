@@ -63,7 +63,12 @@ class Database{
  	public function getRegisters(){
  		$this->execute();
  		return $this->stmt->fetchAll(PDO::FETCH_OBJ);
- 	}
+	 }
+	 
+	 public function getRegister(){
+		 $this->execute();
+		 return $this->stmt->fetch(PDO::FETCH_OBJ);
+	 }
  }
 
  ?>

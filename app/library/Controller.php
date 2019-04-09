@@ -14,6 +14,8 @@ class Controller{
 			die('la vista no existe');
 		}
 	}
+
+	
 }
 
  ?>

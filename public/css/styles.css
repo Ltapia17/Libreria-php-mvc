@@ -1,15 +1,17 @@
 body {
 	
-	font-family: 'Baloo Chettan', cursive;
+	font-family: 'Baloo Chettan';
 	color: black;
+	
 	background: #333333;
 	font-size: 100%;
 	text-align: center;
 	background-attachment: fixed;
 }
 
-.header, .main{
+.header, .main {
 
+  
   font-size: 15px;
   background: #BABABA;
   text-align: center;
@@ -17,6 +19,12 @@ body {
   width: 90%;
   margin: 20px auto;
   max-width: 1000px;
+}
+
+.table {
+	border-collapse: collapse;
+  width: 100%;
+
 }
 
 .identidad {
@@ -38,7 +46,7 @@ body {
 	top:1px;
 }
 
-{
+.libro{
 	
 	width: 90%;
 	height:300px;
