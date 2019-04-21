@@ -16,13 +16,14 @@ class Libro{
 	}
 
 	public function addBook($dates){
-		$this->db->query('INSERT INTO libros (nombre,categoria,resumen,estrellas) 
-		VALUES(:nombre,:categoria,:resumen,:estrellas)');
+		$this->db->query('INSERT INTO libros (nombre,categoria,resumen,estrellas,imagen) 
+		VALUES(:nombre,:categoria,:resumen,:estrellas,:imagen)');
 
 		$this->db->bind(':nombre',$dates['nombre']);
 		$this->db->bind(':categoria',$dates['categoria']);
 		$this->db->bind(':resumen',$dates['resumen']);
 		$this->db->bind(':estrellas',$dates['estrellas']);
+		$this->db->bind(':imagen',$dates['imagen']);
 
 		if($this->db->execute()){
 			return true;

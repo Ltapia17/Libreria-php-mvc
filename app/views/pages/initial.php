@@ -1,42 +1,45 @@
 <?php require RUTE_APP. '/views/inc/header.php'; ?>
-
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Incio</title>
-</head>
 <body>
+<div class="container-fluid">
+   
+        
+   <a class="identidad" href="<?php echo RUTE_URL; ?>index/login">Logearse</a>
 
-   <a class="nav-link" href="pages/login">Logearse</a>
-    <div class="main">
+  
 
-    <a class="nav-link" href="pages/libro">Agregar Libro</a>
-    <div class="main">
-
-
-<table class="table">
+<table class="table table-striped table-dark">
     <thead>
-    <tr>
-    <th>Codigo</th>
-    <th>Nombre Libro</th>
-    <th>Categoria</th>
-    </tr>
+        <tr>
+            <th scope="col">Libros</th>
+            <th scope="col">Resumen</th>
+        </tr>
     </thead>
-    
-    <?php foreach($dates['libros'] as $libro) : ?>
-    <tr>
-    <td><?php echo $libro->id_libro; ?></td>
-    <td><?php echo $libro->nombre; ?></td>
-    <td><?php echo $libro->categoria; ?></td>
-    </tr>
+    <?php foreach ($dates ['libros'] as $libros) : ?>
+    <tbody>
+        <tr>
+            <td>
+                <h5><a href="<?php echo RUTE_URL; ?>pages/libro"><?php echo $libros->nombre; ?></a></h5>
+                
+                <img src="<?php echo RUTE_IMAGES; ?>/img_books/<?php echo $libros->imagen; ?>" width="120px" height="180px">
 
-
- 
-
-<?php endforeach;?>
-</div>
+                <?php echo $libros->id_libro; ?> <br />
+                <?php echo $libros->categoria; ?>
+            </td>
+            <td>
+                <?php echo $libros->resumen; ?>
+            </td>
+        </tr>
+    </tbody>
+    <?php endforeach; ?>
 </table>
 
 
+
+</div>
+
+
+<?php require RUTE_APP. '/views/inc/footer.php'; ?>
 </body>
 </html>

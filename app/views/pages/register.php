@@ -7,6 +7,7 @@
 </head>
 <body>
 
+	
 	<section class="main"> 
 	<div class="wrap">
 		<form action="<?php echo RUTE_URL; ?>pages/register" method="POST">
@@ -27,6 +28,7 @@
 
 	
 	</form>
+	<?php require RUTE_APP.'/views/inc/footer.php'; ?>
 
 </body>
 </html>

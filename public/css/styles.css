@@ -11,35 +11,36 @@ body {
 
 .header, .main {
 
-  
   font-size: 15px;
   background: #BABABA;
   text-align: center;
   padding: 20px;
   width: 90%;
   margin: 20px auto;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
-.table {
-	border-collapse: collapse;
-  width: 100%;
-
+.section{
+  max-width: 1200px;
 }
 
 .identidad {
 	background-color:#4d4d4d;
-	border:1px solid #bababa;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
-	font-family:Courier New;
+	color:#707070;
 	font-size:14px;
-	padding:11px 9px;
+	width:80px;
+    height:px;
 	text-decoration:none;
+	
+	
+
+
 }
 .identidad:hover {
-	background-color:#333333;
+	background-color:#707070;
+	color: white;
 }
 .identidad:active {
 	position:relative;
@@ -52,16 +53,7 @@ body {
 	height:300px;
 	max-width: 1000px; 
 	
-
 }
-
-.wrap{
-	
-	max-width: 200px;
-	margin: auto;
-	background-color: #f2f2f2;
-}
-
 
 .form-control{
 
@@ -73,15 +65,20 @@ body {
 	border-radius: 30px;
 }
 
+.wrap{
+	
+	max-width: 200px;
+	margin: auto;
+	background-color: #f2f2f2;
+}
 .login{
 	
 	font-size: 16px;
 	margin: auto;
 	background: #D2D9D0;
 	padding: 5px 72.4px;
+
 }
-
-
 .button, 
 
 form input[type=submit]{
@@ -98,9 +95,9 @@ form input[type=submit]{
   border: 1px solid white;
  
 }
-
 .p{
 	font-size: 14px;
+
 }
 
 .button:hover{
@@ -109,7 +106,6 @@ form input[type=submit]{
 	border: 1px solid black;
 	
 }
-
 
 .text-control{
 	font-family: 'arial';
@@ -125,8 +121,6 @@ form input[type=submit]{
 
 }
 
-
-
 .barra {
   
   padding: 10px 20px;
@@ -134,14 +128,8 @@ form input[type=submit]{
   background-color: #444444;
   margin: auto;
   width: 90%;
-  max-width: 1000px;
-
-
-  
-
+  max-width: 1200px;
 }
-
-/* Style the topnav links */
 .barra a {
   float: left;
   display: block;
@@ -151,8 +139,6 @@ form input[type=submit]{
   font-size: 17px;
 
 }
-
-/* Change color on hover */
 .barra a:hover {
   color: white;
 }

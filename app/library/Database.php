@@ -67,8 +67,11 @@ class Database{
 	 
 	 public function getRegister(){
 		 $this->execute();
-		 return $this->stmt->fetch(PDO::FETCH_OBJ);
+		 return $this->stmt->fetch(PDO::PARAM_STR);
 	 }
+
+	 
+
  }
 
  ?>
