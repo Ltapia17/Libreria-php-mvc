@@ -16,6 +16,8 @@ class Users{
         return $result;
     }
 
+
+
     public function agreeUsers($dates){
         $this->db->query('INSERT INTO usuarios(nick,nombre,contrasena,email)VALUES(:nick,:nombre,:contrasena,:email)');
         $this->db->bind(':nick',$dates['nick']);
@@ -29,9 +31,24 @@ class Users{
         }else{
             return false;
         }
-
         
     }
+
+    public function validateDates($dates){
+        $this->db->query('SELECT nick , email FROM usuarios WHERE nick= :nick OR email = :email');
+        $this->db->bind(':nick',$dates['nick']);
+        $this->db->bind(':email',$dates['email']);
+        $this->db->execute();
+        $result = $this->db->getRegisterBd();
+        $cantidad = $this->db->rowCount($result);
+        if ($cantidad > 0) {
+            return true;
+        }else{
+            return false;
+        }
+        
+}
+
 }
 
 ?>

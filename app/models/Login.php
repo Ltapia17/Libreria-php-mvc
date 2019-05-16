@@ -10,14 +10,17 @@ class Login{
 		
 	}
 
-	public function consultLogin($dates,$usuarios){
+	public function consultLogin($dates){
 		$this->db->query('SELECT nick, contrasena FROM usuarios WHERE nick=:nick AND contrasena  = :contrasena');
-		$this->db->bind(':nick',$dates['nick'],PDO::PARAM_STR);
-		$this->db->bind(':contrasena',$dates['contrasena'],PDO::PARAM_STR);
-		$this->db->execute();
-		return $this->db->getRegister();
-		$this->close();
-
+		$this->db->bind(':nick',$dates['nick']);
+		$this->db->bind(':contrasena',$dates['contrasena']);
+		$result = $this->db->getRegisterBd();
+		$row = $this->db->rowCount($result);
+		if ($row > 0) {
+			return true;
+		}else{
+			return false;
+		}
 		
 		
 

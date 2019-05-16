@@ -1,15 +1,21 @@
+<?php require RUTE_APP.'/views/inc/header.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>libro</title>
 </head>
 <body>
-	
-	<?php require RUTE_APP.'/views/inc/header.php'; ?>
+	<div  class="container-fluid">
+		<div class="jumbotron">
+			hola mundo
+		</div>
+	</div>
 
 
+
 	
 	
-	<?php require RUTE_APP.'/views/inc/footer.php'; ?>
+	
 </body>
 </html>
+<?php require RUTE_APP.'/views/inc/footer.php'; ?>

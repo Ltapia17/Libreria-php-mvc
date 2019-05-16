@@ -5,6 +5,8 @@ class Core{
 	protected $currentMethod = 'index';
 	protected $param =[];
 
+	
+
 	public function __construct(){
 		$url = $this->getUrl();
 	

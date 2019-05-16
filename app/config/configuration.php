@@ -13,5 +13,7 @@ define('NAMESITE', 'Libreria');
 define('RUTE_IMAGES','http://localhost/proyecto_php/libreria/public/images');
 define('RUTE_HOME','http://localhost/proyecto_php/libreria/pages/home');
 define('RUTE_UP_IMG', '../public/images/img_books');
+define('RUTE_JS', '../public/js');
+
 
  ?>

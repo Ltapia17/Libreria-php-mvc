@@ -60,15 +60,24 @@ class Database{
  		return $this->stmt->execute();
  	}
 
- 	public function getRegisters(){
+ 	public function getRegistersBd(){
  		$this->execute();
  		return $this->stmt->fetchAll(PDO::FETCH_OBJ);
 	 }
-	 
-	 public function getRegister(){
-		 $this->execute();
-		 return $this->stmt->fetch(PDO::PARAM_STR);
+
+	 public function getNumberRowBd(){
+	 	$this->execute();
+	 	return $this->stmt->fetch(PDO::FETCH_ASSOC);
 	 }
+	 
+	 public function getRegisterBd(){
+		 $this->execute();
+		 return $this->stmt->fetch(PDO::FETCH_OBJ);
+	 }
+
+	 public function rowCount(){
+ 		return $this->stmt->rowCount();
+ 	}
 
 	 
 

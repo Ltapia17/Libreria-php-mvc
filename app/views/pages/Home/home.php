@@ -13,10 +13,13 @@
 	</div>
 	hola home
 
-	<a href="<?php echo RUTE_URL; ?>/home/exitLogin">Salir</a>
+
+	
+	<a href="<?php echo RUTE_URL; ?>pages/exitLogin">Salir</a>
 </div>
 
 <?php require RUTE_APP.'/views/inc/footer.php'; ?>
 
 </body>
 </html>
+
